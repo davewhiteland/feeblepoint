@@ -1,0 +1,11 @@
+# feeblepoint gitignore:
+
+# the renumber utility creates (and deletes)
+# interstitial files of the form _01.html, _02.html
+# which are transient
+_[0-9]*.htm
+_[0-9]*.html
+
+# MacOS drops litter in some directories
+**/.DS_Store
+

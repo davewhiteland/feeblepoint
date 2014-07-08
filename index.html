@@ -1,0 +1,60 @@
+<html>
+<head>
+<!-- feeblepoint : HTML presentations : (c) Beholder under GPL : http://www.beholder.co.uk/feeblepoint/ -->  
+<link rel="stylesheet" type="text/css" href="feeblepoint/feeblepoint.css"/>
+<script src="feeblepoint/jquery.js" type="text/javascript"></script>
+</head>
+<body id="feeble-index">
+  <noscript style="font-family:monospace;background-color:red;padding:0.5em;color:white">
+      Requires JavaScript!
+  </noscript>
+  
+  <!--
+    replace everything here with your own controlstent...
+    but remember to keep to "go" link
+    because you'll need that to easily start your presentation!
+  -->
+  <h1>
+    Your title here
+  </h1>
+  <h2>
+      a presentation
+  </h2>
+    <!-- 
+      if you're using a different filename (e.g., p01.htm, or foo001.html) change that here 
+    -->
+	   <a href="01.html" id="feeble-go-button">
+      GO
+    </a>
+
+  <p class="author-link">
+    by <a href="http://www.beholder.co.uk">Beholder</a>
+  </p>
+  <p style="font-size:66%;line-height:1em"><code>&uarr;<br>
+    &larr; full screen please &rarr;
+    <br>&darr;</code></p>
+    
+  <a href="http://www.beholder.co.uk/feeblepoint/"><img
+    src="feeblepoint/feeblepoint_logo_200_x_120.gif" class="feeble-self-promotion"></a>
+
+
+
+
+  <script>
+  jQuery(function() {
+    jQuery(document).keypress( function(e) {
+      // script to enable ENTER and F keys kick off the presentation
+      // (because that's also  the way you advance slides once you're running...)
+      var key_code_ENTER = 13;
+      var key_pressed = String.fromCharCode(e.which).toUpperCase();
+      if (e.which == key_code_ENTER || key_pressed == 'F' ) {
+        jQuery('#feeble-go-button').click();
+        var new_location=location.href.replace(/(index\.html?)?$/, jQuery('#feeble-go-button').attr('href'));
+        location.href=new_location;
+      }    
+    })
+  });
+  </script>
+
+</body>
+</html>

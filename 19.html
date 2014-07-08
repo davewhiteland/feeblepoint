@@ -1,0 +1,39 @@
+<html>
+<head>
+<!-- feeblepoint : HTML presentations : (c) Beholder under GPL : http://www.beholder.co.uk/feeblepoint/ -->
+<link rel="stylesheet" type="text/css" href="feeblepoint/feeblepoint.css"/>
+<link rel="stylesheet" type="text/css" href="custom.css"/>
+<script src="feeblepoint/jquery.js" type="text/javascript"></script>
+<script src="feeblepoint/feeblepoint.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="feeble-slide" data-delay="x3">
+
+
+  <p>
+    One thing you should try to get right:
+  </p>
+  <p>
+    Make sure you set
+    <br>
+    <abbr title="in feeblepoint/feeblepoint.js"><code>
+      final_slide_number = 20
+    </code></abbr>
+    <br>
+    to the final slide number in your presentation.
+  </p>
+  <p>
+    feeblepoint can&rsquo;t auto-detect this, because of that
+    <code>file://</code> thing, and it&rsquo;s dangerous to have a presentation
+    that behaves differently off your USB than it does off the webserver.
+    It&rsquo;s a feature.
+  </p>
+  <p>
+    But if you get this wrong, you can still punch through to the next
+    slide with the enter key anyway.
+  </p>
+
+
+</div>
+</body>
+</html>

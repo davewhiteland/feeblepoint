@@ -1,0 +1,124 @@
+<html>
+<head>
+<!-- feeblepoint : HTML presentations : (c) Beholder under GPL : http://www.beholder.co.uk/feeblepoint/ -->
+<link rel="stylesheet" type="text/css" href="feeblepoint/feeblepoint.css"/>
+<link rel="stylesheet" type="text/css" href="custom.css"/>
+<script src="feeblepoint/jquery.js" type="text/javascript"></script>
+<script src="feeblepoint/feeblepoint.js" type="text/javascript"></script>
+</head>
+<body class="demo-code">
+<div id="feeble-slide" data-delay="x4">
+
+  <div class="central-column extra-wide" style="opacity:0.9; background-color:#cfc;">
+    <p class="left" style="text-align:left">
+      There are lots of features
+      <br>
+      feeblepoint doesn't have...
+    </p>
+    <p style="clear:both">
+      ...but if you're happy with JavaScript, you can
+      <strong>code anything</strong>
+      you want
+      by dropping a function<span style="valign:sup">*</span>
+      into your slide:
+    </p>
+    <div class="renumber-example">
+      <p class="code-example" style="margin:0.5em auto;width:90%">
+          function <strong>feeblepoint</strong>() {<br>
+              <span style="display:inline-block;padding:0.5em 0em 0.5em 2em;color:#666">// count consonants and vowels...</span><br>
+          }
+      </p>
+    </div>
+    <p class="weak-text" style="padding:1em">
+      * feeblepoint calls <code>feeblepoint()</code> at the end of its own
+        setup when the DOM is ready
+    </p>
+  </div>  
+  <div id="count-results">
+    <table>
+      <tr>
+        <td>consonants:</td><td id="total-consonants">0</td>
+      </tr>
+      <tr>
+        <td>vowels:</td><td id="total-vowels">0</td>
+      </tr>
+  </div>
+  
+  <script>
+  
+  var timer_delay = 66;
+  var number_of_spans = 0;
+  var span_id = 0;
+  var timer_id;
+  var $total_const = $('#total-consonants');
+  var $total_vowel = $('#total-vowels');
+  var total_const = 0;
+  var total_vowel = 0;
+
+  // run through the letters (each one a span) highlighting the
+  // text and incrementing the counts of vowels and consonants
+  function highlight_span() {
+    span_id = span_id + 1;
+    var $span;
+    if (span_id > 1) {
+      $('#c' + (span_id-1)).removeClass('demo-highlight'); 
+    }
+    if (span_id <= number_of_spans) {
+      $span = $('#c' + span_id);
+      $span.addClass('demo-highlight');
+      if ($span.text().toLowerCase().match(/[aeiuo]/)) {
+        $total_vowel.text(++total_vowel);
+        $span.addClass('is-vowel');
+      } else {
+        $total_const.text(++total_const);
+      }
+    } else {
+      clearInterval(timer_id);
+      $('.is-vowel').fadeOut(2000, function(){$total_vowel.addClass('demo-zero').text(0)});
+    }
+  }
+  
+  // note: feeblepoint() is invoked at the end of the "DOM is ready" 
+  //       setup within feeblepoint/feeblepoint.js
+  //===============================================================
+  function feeblepoint() {
+    
+    // find every vowel or consonant and wrap it in its own 
+    // span tag, with an id of "c"+number
+    // note use of global span_id
+    $('.central-column p').each(function (){
+      var old_html = $(this).html();
+      var new_html = "";
+      var chars = old_html.split("");
+      var is_in_a_tag = false;
+      var replacement;
+      var sticky_highlight = $(this).hasClass('sticky-highlight')? "class='sticky'":"";
+      for (var j = 0; j < chars.length; j++) {
+        var c = chars[j];
+        replacement = c;
+        if (c === '<') {
+          is_in_a_tag = true;
+        } else if (c === '>') {
+          is_in_a_tag = false;
+        } else if (! is_in_a_tag && c.match(/[a-z]/i)) {
+          replacement = "<span id='c" + ++span_id + "' " + sticky_highlight + ">" + c + "</span>";
+        }
+        new_html += replacement;
+      }
+      $(this).html(new_html);
+    });
+    number_of_spans = span_id;
+    span_id = 0;
+    // reveal the total table a couple of seconds after page load...
+    // then kick off the counting with setTimeout
+    $('#count-results').delay(1800).slideDown(500, function(){
+      setTimeout(function(){timer_id = setInterval(highlight_span, timer_delay)}, 2000);
+    });
+  }
+  
+  </script>
+
+
+</div>
+</body>
+</html>

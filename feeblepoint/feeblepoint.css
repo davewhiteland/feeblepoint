@@ -1,0 +1,93 @@
+/* 
+   Making some rude assumptions about settings for body here:
+   if you don't like them for your presentation, override them
+   in custom.css or edit this file to your liking 
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.3em;
+    font-size: 200%;
+}
+body#feeble-index {
+  padding:1em;
+  text-align:center;
+}
+body#feeble-index h1  {
+  font-family: monospace;
+}
+body#feeble-index h2 {
+  font-family: monospace;
+  margin: 2em auto;
+}
+body p#noscript {
+  background-color: red;
+  color: white;
+  display: block;
+  padding: 1em;
+  font-family: monospace;
+}
+#feeble-index .author-link {
+  font-size:60%;
+}
+#feeble-slide {
+    display:none;
+    margin:0;
+    padding-top:23px; /* 20 + 3px */
+}
+.feeble-want-shouty-timer #feeble-slide {
+   padding-top: 50px; /* 20 + 30px */
+}
+#feeble-timer{
+    position: fixed;
+    top: 0;
+    right:0;
+    height: 3px;
+    width: 100%;
+    background-color:gray;
+    transition: background-color 1s, width 0.5s;
+}
+.feeble-want-shouty-timer #feeble-timer{
+    height: 30px;  
+}
+.feeble-self-promotion {
+  position:absolute;
+  bottom:5;
+  right:5;
+}
+#feeble-go-button {
+  padding:1em;
+  background-color:#0a0;
+  border-radius:1em;
+  color:#fff;
+  font-size:150%;
+  font-weight: bold;
+  display:block;
+  width:4em;
+  margin:1em auto;
+  text-decoration:none;
+  transition:background-color 0.333s;
+  text-shadow: #060 -1px -2px 0;
+}
+#feeble-go-button:hover {
+  background-color:#060;  
+}
+#feeble-pause-alert {
+  display:none; /* qjuery displays and fades out */
+  position: fixed;
+  top: 33%;
+  z-index: 10;
+  width: 200px;
+  height:200px;
+  background-color: transparent;
+  background-image:url(pause-resume-icons.png);
+  background-position: top center;
+}
+#feeble-pause-alert.feeble-resume {
+  background-position: bottom center;
+}
+/* it's too convenient, so this class doesn't have a 'feeble' prefix */
+.reveal{
+  display:none;
+}
