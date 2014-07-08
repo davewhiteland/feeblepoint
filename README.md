@@ -38,7 +38,7 @@ in the auditorium before you're due on).
 * [`feeblepoint` JavaScript function](#feeblepoint-javascript-function)
 * [Renumbering utility](#renumbering-utility)
 * [Creating a new presentation](#creating-a-new-presentation)
-* [Troubleshooting & tidbits](#troubleshooting-tidbits)
+* [Troubleshooting & tidbits](#troubleshooting--tidbits)
 * [License and disclaimer](#license-and-disclaimer)
 
 About the name
