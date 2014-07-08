@@ -132,7 +132,7 @@ also look into slide `18.html` in the demonstration.
 Configurable details
 --------------------
 
-You can change several things by editing `feeblepooint/feeblepoint.js` --
+You can change several things by editing `feeblepoint/feeblepoint.js` --
 the key things you can easily change are at the top, and clearly marked:
 
 ### `want_auto_advance`
