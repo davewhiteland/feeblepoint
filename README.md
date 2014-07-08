@@ -1,13 +1,13 @@
 feeblepoint
 =========== 
 
-Minimal page-by-page "presentations" in a browser. 
+![feeblepoint has a logo?](http://www.beholder.co.uk/feeblepoint/demo/feeblepoint/feeblepoint_logo_200_x_120.gif)
 
-<http://www.beholder.co.uk/feeblepoint/>
+### Minimal page-by-page "presentations" in a browser. 
 
-Ooh! feeblepoint can **explain itself**: try double-clicking the feeblepoint
-presentation (`index.html`) about feeblepoint that feeblepoint ships with -- or
-see [the presentation on the web](http://www.beholder.co.uk/feeblepoint/demo/index.html).
+> Ooh! feeblepoint can **explain itself**: try double-clicking the feeblepoint
+> presentation (`index.html`) about feeblepoint that feeblepoint ships with -- or
+> see [the presentation on the web](http://www.beholder.co.uk/feeblepoint/demo/index.html).
 
 For nerds, feeblepoint is an easy way to prepare an **ignite talk**, or things like
 ignite talks.
@@ -355,3 +355,6 @@ the way feeblepoint uses it -- can be a little approximate, so if you must be
 very precise with your timing, use a clock too.
 
 Having said all that, hopefully feeblepoint will help. Yay if it does.
+
+<http://www.beholder.co.uk/feeblepoint/>
+
