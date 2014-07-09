@@ -12,6 +12,10 @@ feeblepoint
 For nerds, feeblepoint is an easy way to prepare an **ignite talk**, or things like
 ignite talks.
 
+> Alternatively,
+> if you want something more lovely than feeblepoint, check out Hakim El Hattab's
+> [reveal.js](http://hakim.se/projects/reveal-js)
+
 * copy feeblepoint as a directory
 * make "slides" as numbered HTML files `01.html` `02.html` `03.html`
 * feeblepoint automatically advances to the next slide
