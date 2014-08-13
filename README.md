@@ -96,8 +96,8 @@ feeblepoint comes with its own demo -- 20 html files which you can either edit
 or simply delete and make new. There's a blank one called `_slide.html` for you
 to use (it contains the bare HTML you need for a slide).
 
-When feeblepoint runs the presentation, it ignores anything that does look like
-an HTML file with a number before the dot (if you know regexps, that's
+When feeblepoint runs the presentation, it ignores anything that does not look
+like an HTML file with a number before the dot (if you know regexps, that's
 basically `\w*\d+\.html?`)... which is why the `_slide.html` file can sit there
 quite happily without breaking anything. Note that the slide loads the preamble
 and -- this is important if you want things to work -- the container div with
