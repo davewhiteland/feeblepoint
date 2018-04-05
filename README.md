@@ -112,7 +112,7 @@ the **demo** slides pretty. It uses images in the `demo-images/` directory,
 which contains the images used in the demo. You can delete them. Alternatively,
 you could use them... but if you do, kindly attribute the images as they've
 all been released under CC-BY-NC from
-[https://www.flickr.com/photos/pennymaycock/](Penny Maycock aka babar141)).
+[https://www.flickr.com/photos/pennymaycock/](Penny Maycock aka babar141).
 
 Inside the `feeblepoint/` directory there's another directory call `utils/`.
 Currently this only contains a renumbering utility (`renumber.pl`), but this is
