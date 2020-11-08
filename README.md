@@ -1,6 +1,10 @@
 feeblepoint
 =========== 
 
+> Feeblepoint scratched an itch many years ago, but today you should be using
+> **Hakim El Hattab’s [reveal.js](https://revealjs.com) instead!**
+
+
 ![feeblepoint has a logo?](http://www.beholder.co.uk/feeblepoint/demo/feeblepoint/feeblepoint_logo_200_x_120.gif)
 
 ### Minimal page-by-page "presentations" in a browser. 
@@ -14,7 +18,7 @@ ignite talks.
 
 > Alternatively,
 > if you want something more lovely than feeblepoint, check out Hakim El Hattab's
-> [reveal.js](http://hakim.se/projects/reveal-js)
+> [reveal.js](https://revealjs.com)
 
 * copy feeblepoint as a directory
 * make "slides" as numbered HTML files `01.html` `02.html` `03.html`
