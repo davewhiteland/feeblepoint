@@ -4,6 +4,8 @@ feeblepoint
 > Feeblepoint scratched an itch many years ago, but today you should be using
 > **Hakim El Hattab’s [reveal.js](https://revealjs.com) instead!**
 
+> **Or a single-HTML-page presentation template? Go to**
+> **[FeeblePoint2](https://davewhiteland.github.io/feeblepoint2/)!**
 
 ![feeblepoint has a logo?](http://www.beholder.co.uk/feeblepoint/demo/feeblepoint/feeblepoint_logo_200_x_120.gif)
 
